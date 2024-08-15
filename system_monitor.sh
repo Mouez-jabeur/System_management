@@ -55,11 +55,4 @@ NETWORK_ACTIVITY="Received: $(numfmt --to=iec $NETWORK_RX), Transmitted: $(numfm
     echo -e "${CYAN}==============================${NC}\n"
 } | tee -a "$LOG_FILE"
 
-# Optionally, send an alert if any threshold is exceeded (e.g., via email or another method)
-# Example: Send an email alert (you'll need to configure mailx or another mail client)
-# if [ $(echo "$CPU_USAGE > $CPU_THRESHOLD" | bc -l) -eq 1 ] || \
-#    [ $(echo "$MEM_USAGE > $MEM_THRESHOLD" | bc -l) -eq 1 ] || \
-#    [ $(echo "$DISK_USAGE > $DISK_THRESHOLD" | bc -l) -eq 1 ]; then
-#     echo "System resource usage alert!" | mailx -s "System Monitor Alert" user@example.com
-# fi
 
